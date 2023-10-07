@@ -79,7 +79,7 @@ const Features = () => {
         }}
       >
         {features.map((feature) => (
-          <Grid item md={6} lg={4}>
+          <Grid key={feature.title} item md={6} lg={4}>
             <Box
               sx={{
                 color: COLORS.white,

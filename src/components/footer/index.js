@@ -44,11 +44,11 @@ const Footer = () => {
               About Us
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              At EV Connect Hub, we're dedicated to revolutionizing the electric
-              vehicle experience. Our platform connects EV owners and charging
-              station providers, making it easier than ever to find, reserve,
-              and share charging points. Join us in shaping a greener future,
-              one charge at a time.
+              At EV Connect Hub, we&apos;re dedicated to revolutionizing the
+              electric vehicle experience. Our platform connects EV owners and
+              charging station providers, making it easier than ever to find,
+              reserve, and share charging points. Join us in shaping a greener
+              future, one charge at a time.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>

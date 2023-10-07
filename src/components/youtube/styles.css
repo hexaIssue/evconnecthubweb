@@ -1,0 +1,16 @@
+.video-responsive {
+    overflow: hidden;
+    position: relative;
+}
+
+.video-responsive iframe {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-self: center;
+    border-radius: 20px;
+    border: 1px solid rgba(var(--card-border-rgb), 0.5);
+    transition: background 200ms, border 200ms;
+    box-shadow: 0 0 10px rgba(var(--card-border-rgb), 0.5);
+    background-color: white;
+}

@@ -1,95 +1,94 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import AppBar from "@/components/navbar/navbar";
+import { Typography } from "@mui/material";
+import * as COLORS from "@/constants/colors";
+import Image from "next/image";
+import blockImage from "@/assets/images/headerImage.png";
+import Head from "next/head";
+import YoutubeEmbed from "@/components/youtube";
+import "./page.css";
+import Features from "@/components/features";
+import Footer from "@/components/footer";
 
-export default function Home() {
+function ResponsiveAppBar() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <div>
+      <Head>
+        <title>EV Connect Hub</title>
+        <meta
+          name="description"
+          content="EV Connect Hub: Your Ultimate EV Charging Solution. Find, Reserve, and Share Electric Vehicle Charging Points with Ease. Join the EV Revolution Today!"
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      </Head>
+      <Box
+        className="landing"
+        sx={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }}
+      >
+        <AppBar />
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            width: "100%",
+            flexDirection: {
+              xs: "column",
+              md: "row",
+              lg: "row",
+            },
+            height: { xs: "700px", md: "400px", lg: "600px" },
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% 100%",
+            backgroundImage: `linear-gradient(180deg, ${COLORS.darkGrayColor} 40%, rgba(255,255,255,1) 74%)`,
+          }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <Box
+            sx={{
+              width: { xs: "100%", md: "100%", lg: "55%" },
+              padding: { sm: "0", xs: "16px" },
+              marginTop: "64px",
+            }}
+            alignItems={{ xs: "center", md: "center", lg: "flex-start" }}
+          >
+            <Typography
+              sx={{
+                whiteSpace: "pre-wrap",
+                fontSize: { xs: "30px", md: "40px", lg: "58px" },
+                fontWeight: "800",
+                fontFamily: "raleway",
+                textTransform: "uppercase",
+                color: COLORS.primaryLight,
+                textAlign: { md: "center", xs: "center", lg: "left" },
+              }}
+            >
+              Register your personal, office or home{" "}
+              <Typography
+                as="span"
+                sx={{
+                  width: "100%",
+                  fontSize: { xs: "30px", md: "40px", lg: "58px" },
+                  fontWeight: "700",
+                  fontFamily: "raleway",
+                  textTransform: "uppercase",
+                  color: COLORS.primary,
+                }}
+              >
+                Charging point{" "}
+              </Typography>
+              and start earning now
+            </Typography>
+          </Box>
+          <Image src={blockImage} alt="headerImage" />
+        </Box>
+      </Box>
+      <Features />
+      <YoutubeEmbed embedId="8Hp5Ozjl6UI" />
+      <Footer />
+    </div>
+  );
 }
+export default ResponsiveAppBar;

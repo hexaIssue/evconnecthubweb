@@ -41,14 +41,20 @@ function ResponsiveAppBar() {
             alignItems: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% 100%",
-            backgroundImage: `linear-gradient(180deg, ${COLORS.darkGrayColor} 40%, rgba(255,255,255,1) 74%)`,
+            backgroundImage: `linear-gradient(180deg, ${COLORS.skyBlue} 40%, rgba(255,255,255,1) 74%)`,
           }}
         >
           <Box
             sx={{
               width: { xs: "100%", md: "100%", lg: "55%" },
-              padding: { sm: "0", xs: "16px" },
-              marginTop: {xs: "74px", md: '64px', lg: '64px'},
+              padding: { sm: "0", xs: "16px", lg: "20px" },
+              marginTop: { xs: "74px", md: "64px", lg: "64px" },
+              paddingRight: {
+                lg: "150px",
+                md: "0px",
+                sm: "0px",
+                xs: "0px",
+              },
             }}
             alignItems={{ xs: "center", md: "center", lg: "flex-start" }}
           >
@@ -56,9 +62,8 @@ function ResponsiveAppBar() {
               sx={{
                 whiteSpace: "pre-wrap",
                 fontSize: { xs: "30px", md: "40px", lg: "45px" },
-                marginBottom: { xs: '-80px', lg: '0px', md: '0px', sm: '0px' },
+                marginBottom: { xs: "-80px", lg: "0px", md: "0px", sm: "0px" },
                 fontWeight: "800",
-                fontFamily: "raleway",
                 textTransform: "uppercase",
                 color: COLORS.primaryLight,
                 textAlign: { md: "center", xs: "center", lg: "left" },
@@ -71,7 +76,6 @@ function ResponsiveAppBar() {
                   width: "100%",
                   fontSize: { xs: "30px", md: "40px", lg: "45px" },
                   fontWeight: "700",
-                  fontFamily: "raleway",
                   textTransform: "uppercase",
                   color: COLORS.primary,
                 }}

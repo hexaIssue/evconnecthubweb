@@ -20,3 +20,4 @@ export const placeholderText = "#CBCBCB";
 export const primaryLight = "#635b49";
 export const textLight = "#939393";
 export const imageBackgroundColor = "#F5F5F5";
+export const skyBlue = "#87CEEB";

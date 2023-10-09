@@ -32,7 +32,7 @@ const Footer = () => {
             width: "80%",
             backgroundColor: COLORS.darkGrayColor,
             height: 2,
-            mb: 10,
+            mb: "20px",
           }}
         />
       </Box>
@@ -63,25 +63,33 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
+            <Typography variant="h6" color="text.primary">
               Follow Us
             </Typography>
-            <Link
-              href="https://www.facebook.com/profile.php?id=61551829154747&mibextid=ZbWKwL"
-              color="inherit"
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
             >
-              <Image src={facebook} width={25} height={25} />
-            </Link>
-            <Link
-              href="https://instagram.com/evconnecthub?igshid=NGVhN2U2NjQ0Yg=="
-              color="inherit"
-              sx={{ pl: 1, pr: 1, pt: 100 }}
-            >
-              <Image src={instagram} width={30} height={30} />
-            </Link>
-            <Link href="https://t.me/evconnecthub" color="inherit">
-              <Image src={xLogo} width={30} height={30} />
-            </Link>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61551829154747&mibextid=ZbWKwL"
+                color="inherit"
+              >
+                <Image src={facebook} width={25} height={25} />
+              </Link>
+              <Link
+                href="https://instagram.com/evconnecthub?igshid=NGVhN2U2NjQ0Yg=="
+                color="inherit"
+                sx={{ pl: 1, pr: 1}}
+              >
+                <Image src={instagram} width={30} height={30} />
+              </Link>
+              <Link href="https://t.me/evconnecthub" color="inherit">
+                <Image src={xLogo} width={27} height={27} />
+              </Link>
+            </Box>
           </Grid>
         </Grid>
         <Box mt={5}>

@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
             <Typography
               sx={{
                 whiteSpace: "pre-wrap",
-                fontSize: { xs: "30px", md: "40px", lg: "58px" },
+                fontSize: { xs: "30px", md: "40px", lg: "45px" },
                 marginBottom: { xs: '-80px', lg: '0px', md: '0px', sm: '0px' },
                 fontWeight: "800",
                 fontFamily: "raleway",
@@ -69,7 +69,7 @@ function ResponsiveAppBar() {
                 as="span"
                 sx={{
                   width: "100%",
-                  fontSize: { xs: "30px", md: "40px", lg: "58px" },
+                  fontSize: { xs: "30px", md: "40px", lg: "45px" },
                   fontWeight: "700",
                   fontFamily: "raleway",
                   textTransform: "uppercase",

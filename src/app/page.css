@@ -1,0 +1,10 @@
+.landingImage {
+    width: 500px;
+    height: 348px;
+}
+
+@media screen and (max-width: 560px) {
+    .landingImage {
+        width: 100%;
+    }
+}

@@ -1,23 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import * as COLORS from "@/constants/colors";
 
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
+    <Container maxWidth="xl">
     <Box
       sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: COLORS.white,
-        width: "100%",
-        height: 300,
       }}
     >
       <iframe
-        width="100"
+        width="100%"
         height="100"
         src={`https://www.youtube.com/embed/${embedId}`}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -25,6 +24,7 @@ const YoutubeEmbed = ({ embedId }) => (
         title="Embedded youtube"
       />
     </Box>
+    </Container>
   </div>
 );
 

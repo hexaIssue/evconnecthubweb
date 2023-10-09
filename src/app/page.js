@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -13,16 +12,15 @@ import "./page.css";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
 
+export const metadata = {
+  title: "EV Connect Hub",
+  description:
+    "EV Connect Hub: Your Ultimate EV Charging Solution. Find, Reserve, and Share Electric Vehicle Charging Points with Ease. Join the EV Revolution Today!",
+};
+
 function ResponsiveAppBar() {
   return (
     <div>
-      <Head>
-        <title>EV Connect Hub</title>
-        <meta
-          name="description"
-          content="EV Connect Hub: Your Ultimate EV Charging Solution. Find, Reserve, and Share Electric Vehicle Charging Points with Ease. Join the EV Revolution Today!"
-        />
-      </Head>
       <Box
         className="landing"
         sx={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }}
@@ -50,7 +48,7 @@ function ResponsiveAppBar() {
             sx={{
               width: { xs: "100%", md: "100%", lg: "55%" },
               padding: { sm: "0", xs: "16px" },
-              marginTop: "64px",
+              marginTop: {xs: "74px", md: '64px', lg: '64px'},
             }}
             alignItems={{ xs: "center", md: "center", lg: "flex-start" }}
           >
@@ -58,6 +56,7 @@ function ResponsiveAppBar() {
               sx={{
                 whiteSpace: "pre-wrap",
                 fontSize: { xs: "30px", md: "40px", lg: "58px" },
+                marginBottom: { xs: '-80px', lg: '0px', md: '0px', sm: '0px' },
                 fontWeight: "800",
                 fontFamily: "raleway",
                 textTransform: "uppercase",

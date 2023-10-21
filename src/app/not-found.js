@@ -18,7 +18,7 @@ export const metadata = {
     "EV Connect Hub: Your Ultimate EV Charging Solution. Find, Reserve, and Share Electric Vehicle Charging Points with Ease. Join the EV Revolution Today!",
 };
 
-function ResponsiveAppBar() {
+function NotFound() {
   return (
     <div>
       <Box
@@ -101,4 +101,4 @@ function ResponsiveAppBar() {
     </div>
   );
 }
-export default ResponsiveAppBar;
+export default NotFound;
